@@ -10,8 +10,7 @@ public class Grupo{
 	private String palavrasChave;
 	private List<Projeto> projetos;
 	private List<Professor> professores;
-	
-	
+		
 	public Grupo(){
 		projetos = new ArrayList<Projeto>();
 		professores = new ArrayList<Professor>();
@@ -27,6 +26,15 @@ public class Grupo{
 	
 	public void addProfessores(List<Professor> professores) {
 		this.professores.addAll(professores);
+	}
+	
+	public void addProfessores(String profString) throws Exception{
+		String []profList = profString.split(", ");
+		BancoDeDados bd = BancoDeDados.getInstance();
+		for (String profNome : profList) {
+			Professor professor = bd.buscaProfessor(profNome);
+			professores.add(professor);
+		}		
 	}
 	
 	public String getNome() {
@@ -58,5 +66,4 @@ public class Grupo{
 	}
 	
 	
-
 }
