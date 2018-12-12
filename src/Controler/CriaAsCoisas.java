@@ -12,10 +12,6 @@ public class CriaAsCoisas {
     
     }
     
-    public void criaProjeto(){
-    	
-    }
-    
     public void criaGrupo(){
     	BancoDeDados bd = BancoDeDados.getInstance();
     	
@@ -43,6 +39,7 @@ public class CriaAsCoisas {
     			+ "do comércio virtual promove a alavancagem dos procedimentos "
     			+ "normalmente adotados. \r\n");
     	grupo.addProjeto(projeto);
+        bd.addProjeto(projeto);
     	bd.buscaProfessor("Menino Jan").addProjeto(projeto);
     	
     	
@@ -62,10 +59,11 @@ public class CriaAsCoisas {
     			+ "a execução dos pontos do programa cumpre um papel essencial na "
     			+ "formulação das novas proposições");
     	grupo.addProjeto(projeto);
+        bd.addProjeto(projeto);
     	bd.buscaProfessor("Menino Leite").addProjeto(projeto);
     	
     	projeto = new Projeto();
-    	projeto.setAprovado(false);
+    	projeto.setAprovado(true);
     	projeto.setNome("Estratégias ótimas para uma abordagem no problema de geração de batatas");
     	projeto.setProfessorResponsavel(bd.buscaProfessor("Menino Elvis"));
     	projeto.addColaborador(bd.buscaProfessor("Menino Leite"));
@@ -79,6 +77,7 @@ public class CriaAsCoisas {
     			+ "ao avanço tecnológico, assim como o surgimento do comércio virtual "
     			+ "causa impacto indireto na reavaliação dos modos de operação convencionais. ");
     	grupo.addProjeto(projeto);
+        bd.addProjeto(projeto);
     	bd.buscaProfessor("Menino Elvis").addProjeto(projeto);
     	
     }

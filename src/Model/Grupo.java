@@ -12,7 +12,7 @@ public class Grupo{
 	private List<Professor> professores;
 	
 	
-	public Grupo() {
+	public Grupo(){
 		projetos = new ArrayList<Projeto>();
 		professores = new ArrayList<Professor>();
 	}

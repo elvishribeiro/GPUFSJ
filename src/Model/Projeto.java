@@ -1,6 +1,7 @@
 
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Projeto {
@@ -16,7 +17,10 @@ public class Projeto {
     
     
     public Projeto(){
-        
+    
+     colaboradores = new ArrayList<Professor>();
+     subProjetos = new ArrayList<SubProjeto>();
+     
         
     }
     
@@ -29,7 +33,16 @@ public class Projeto {
     public String getPalavraChave() {
         return palavraChave;
     }
-
+    
+    public String verColaboladores(){
+        
+        for (Professor a : colaboradores){
+            
+            
+        }
+        
+       return null; 
+    }
     public void setPalavraChave(String palavraChave) {
         this.palavraChave = palavraChave;
     }
